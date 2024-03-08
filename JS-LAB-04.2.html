@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        var points = prompt("Enter your points:");
+        points = parseFloat(points);
+        let grade;
+        if (points >= 80) {
+            grade = "A";
+        } else if (points >= 76 && points <= 79) {
+            grade = "B+";   
+        } else if (points >= 70 && points <= 75) {
+            grade = "B";
+        } else if (points >= 65 && points <= 69) {
+            grade = "C+";
+        } else if (points >= 60 && points <= 65) {
+            grade = "C";
+        } else if (points >= 56 && points <= 59) {
+            grade = "D+";
+        } else if (points >= 50 && points <= 55) {
+            grade = "D";
+        } else {
+            grade = "F";
+        }
+    console.log("คุณได้เกรด " + grade);
+    </script>
+
+
+</body>
+</html>

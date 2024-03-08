@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="in1" placeholder="เข้าสู่ระบบ">
+    <input type="text" id="in2" placeholder="ใส่รหัสผ่าน">
+    <button onclick="toggleTextBox()">เข้าสู่ระบบ</button>    
+    <script>
+        let username = prompt("ใครเข้าสู่ระบบ");
+        let password = prompt("รหัสผ่าน");
+        if (username !== null && username !== "") {
+        if (username === "Admin") {
+        let password = prompt("Enter password:");
+        if (password !== null) {
+           
+            if (password === "codecamp#5") {
+                alert("Welcome"); 
+            } else if (password === "") {
+                alert("Cancel"); 
+            } else {
+                alert("Wrong password"); 
+            }
+        } else {
+            alert("Cancel"); 
+        }
+    } else {
+        alert("ผมไม่รู้จักคุณ"); 
+    }
+} else {
+    alert("ยกเลิก"); 
+}
+        
+        
+        function toggleTextBox() {
+            let state = document.querySelector("#in1").disabled
+            document.querySelector("#in1").disabled = !state
+            let state = document.querySelector("#in2").disabled
+            document.querySelector("#in2").disabled = !state
+            //document.querySelector("#in1").disabled  = !(document.querySelector("#in1").disabled = !state)
+        }
+    </script>
+</body>
+</html>

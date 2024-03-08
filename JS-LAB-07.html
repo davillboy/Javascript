@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+</head>
+<body>
+
+<!-- Username input -->
+<label for="username">Username:</label>
+<input type="text" id="username">
+
+<!-- Button to trigger login -->
+<button onclick="login()">Login</button>
+
+<!-- JavaScript code -->
+<script>
+    // Function to handle login
+    function login() {
+        // Get the value of the username input
+        let usernameInput = document.getElementById("username").value.trim();
+
+        // Check if the username is provided
+        if (usernameInput !== "") {
+            // Check if the username is "Admin"
+            if (usernameInput === "Admin") {
+                // Prompt the user for the password
+                let password = prompt("Enter password:");
+
+                // Check if the password is provided
+                if (password !== null) {
+                    // Check if the password is correct
+                    if (password === "codecamp#5") {
+                        alert("Welcome"); // Correct password
+                    } else if (password === "") {
+                        alert("Cancel"); // User canceled or entered an empty password
+                    } else {
+                        alert("Wrong password"); // Incorrect password
+                    }
+                } else {
+                    alert("Cancel"); // User canceled password prompt
+                }
+            } else {
+                alert("I don't know you"); // Username is not "Admin"
+            }
+        } else {
+            alert("Please enter a username"); // Username input is empty
+        }
+    }
+</script>
+
+</body>
+</html>
