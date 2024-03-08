@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // First player inputs the number
+let secretNumber = parseInt(prompt("ใส่ตัวเลขที่จะทาย 1-100:"));
+
+// Ensure the input is within the specified range
+while (isNaN(secretNumber) || secretNumber < 1 || secretNumber > 100) {
+    secretNumber = parseInt(prompt("ตัวเลขตั้งแต่1-100:"));
+}
+
+// Second player guesses the number
+let guess;
+let attempts = 0;
+
+while (true) {
+    guess = parseInt(prompt("ผู้เล่นคนที่สองทายตัวเลข 1-100:"));
+
+    // Ensure the input is within the specified range
+    while (isNaN(guess) || guess < 1 || guess > 100) {
+        guess = parseInt(prompt("ใส่ตัวเลขระหว่าง 1:100:"));
+    }
+
+    attempts++;
+
+    if (guess === secretNumber) {
+        alert(`ว้าวยินดีด้วยคุณทายถูก (${secretNumber}) in ${attempts} attempts.`);
+        break;
+    } else if (guess < secretNumber) {
+        alert("ตัวเลขมากกว่านะ");
+    } else {
+        alert("ตัวเลขน้อยกว่า");
+    }
+}
+
+
+    </script>
+</body>
+</html>
